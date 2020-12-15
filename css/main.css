@@ -1,0 +1,243 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 3000px;
+}
+.header{
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+}
+.overlay{
+    background: rgb(10 76 93 / 62%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+.overlay h1{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.plan{
+    margin-left: 1%;
+    margin-right: 1%;
+    border: 2px solid #fff;
+    width: 48%;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.plan:hover{
+    background-color: #fff;
+    color: rgb(21, 11, 65);
+}
+
+.order{
+    margin: 20px 1% 0;
+    border: 2px solid #fff;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.order:hover{
+    background-color: #fff;
+    color: rgb(21, 11, 65);
+}
+
+/* --------------- End Header -------------- */
+/* -------------- Start Features ------------ */
+
+.features{
+    padding: 30px 0;
+}
+
+.features .feat{
+    color: #555;
+    width: 33%;
+    padding-right: 3%;
+}
+.features .feat p{
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.features .feat h2{
+    font-size: 20px;
+}
+
+/* -------------- End Features ------------ */
+
+/* -------------- Start about-us -----------*/
+
+.about-us{
+    padding: 30px 0;
+    background-color: #ececec;
+}
+
+.about-us .responsive-paragraphe{
+    color: #555;
+    font-size: 18px;
+}
+/* -------------- End about-us -----------*/
+
+/* -------------- Start Our Works -----------*/
+
+.works{
+    padding: 30px 0;
+}
+.works .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.works .image{
+    flex-basis: 25%;
+}
+
+/* -------------- End Our Works -----------*/
+
+
+/* -------------- Media Query -------------- */
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up)*/
+@media (max-width: 767px) { 
+    .container{
+        width: 100%;
+    }
+    .plan{
+        float: none !important;
+        margin: 20px auto;
+        box-sizing: content-box !important;
+    }
+    .visible-xs{
+        display: block !important;
+    }
+    .hidden-xs{
+        display: none;
+    }
+    .features .feat{
+        color: #555;
+        float: none;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 40px !important;
+    }
+    .responsive-paragraphe{
+        font-size: 15px !important;
+    }
+    .works .image{
+        flex-basis: 100% !important;
+        
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px){ 
+    .container{
+        width: 738px;
+    }
+    .visible-sm{
+        display: block !important;
+    }
+    .hidden-sm{
+        display: none;
+    }
+    .features .feat:nth-of-type(3){
+        color: #555;
+        width: 100%;
+        text-align: center;
+    }.features .feat:not(:nth-of-type(3)){
+        color: #555;
+        width: 50%;
+        float: left;
+    }
+    .works .image{
+        flex-basis: 50% !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px){ 
+    .container{
+        width: 962px;
+    }
+    .visible-md{
+        display: block !important;
+    }
+    .hidden-md{
+        display: none;
+    }
+    .works .image{
+        flex-basis: 33.33333% !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container{
+        width: 1170px;
+    }
+    .visible-lg{
+        display: block !important;
+    }
+    .hidden-lg{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/* ------------------ Start My Framwork ---------------- */
+
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+.clearFix{
+    clear: both;
+}
+
+.visible-xs, .visible-sm, .visible-md, .visible-lg{
+    display: none;
+}
+
+.h1{
+    font-size: 2em;
+    color: #555;
+}
+
+.float-l{
+    float: left;
+}
+
+.responsive-paragraphe{
+    line-height: 1.7;
+    font-size: 16px;
+}
+.responsive-image{
+    width: 100%;
+    height: 100%;
+}
+/* ------------------ End My framwork ---------------- */
