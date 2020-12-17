@@ -4,9 +4,7 @@
     list-style-type: none;
     text-decoration: none;
 }
-body{
-    height: 3000px;
-}
+
 .header{
     background: url(../img/bg.jpg) no-repeat center center;
     background-size: cover;
@@ -182,6 +180,56 @@ body{
 
 /* --- End What They Say About Us --- */
 
+/* ---- Start product information ----*/
+.product-info{
+    background-color: #eee;
+    margin-top: 10px;
+    padding: 30px 0;
+    color: #000;;
+}
+
+.product-info .h1{
+    color: #555;
+    margin-top: 0;
+}
+
+.product-info .tab-list li{
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #ccc;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.product-info .tab-list li.selected{
+    color: #016c96;
+    background-color: #fff;
+}
+.product-info .info div:not(:first-of-type){
+    display: none;
+}
+
+.product-info .info div{
+    background-color: #fff;
+    padding: 20px;
+    line-height: 2;
+}
+
+/* ---- End product information ----*/
+
+/* ------------ Start Footer --------------- */
+.footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+.footer .copyright{
+    margin-left: 50px;
+}
+.footer .designed{
+    margin-right: 50px;
+}
+/* ------------ End Footer ------------ */
 
 /* -------------- Media Query -------------- */
 
@@ -249,6 +297,22 @@ Small devices (landscape phones, 576px and up)*/
     .testimonials .h1{
         font-size: 25px;
         margin: 40px 0 !important;
+    }
+    .product-info .tab-list li{
+        display: block;
+        text-align: center;
+    }
+    .footer{
+        text-align: center;
+    }
+    .footer .copyright{
+        float: none;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .footer .designed{
+        margin-right: 0;
+        float: none;
     }
  }
 
@@ -401,6 +465,10 @@ Small devices (landscape phones, 576px and up)*/
 
 .float-l{
     float: left;
+}
+
+.float-r{
+    float: right;
 }
 
 .responsive-paragraphe{
