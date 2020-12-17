@@ -1,10 +1,10 @@
 *{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
 }
-body{
-    height: 3000px;
-}
+
 .header{
     background: url(../img/bg.jpg) no-repeat center center;
     background-size: cover;
@@ -89,7 +89,7 @@ body{
 /* -------------- Start Our Works -----------*/
 
 .works{
-    padding: 30px 0;
+    padding-top: 30px;
 }
 .works .images{
     display: flex;
@@ -102,6 +102,83 @@ body{
 }
 
 /* -------------- End Our Works -----------*/
+
+/* ------ Start Our Pricing Plan -------- */
+.pricing-table{
+    background-color: #555;
+    margin-top: 10px;
+    padding: 30px 0;
+    color: #fff;
+}
+
+.pricing-table .h1{
+    color: #fff;
+    margin-top: 0;
+}
+.pricing-table .plans{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pricing-table .plan-details{
+    border: 2px solid #fff;
+    padding: 20px;
+    margin: 0 1%;
+    flex-basis: 31%;
+    position: relative;
+}
+.pricing-table .plan-details:nth-of-type(1){
+    order: 2;
+}
+.pricing-table .plan-details:nth-of-type(2){
+    order: 1;
+}
+.pricing-table .plan-details:nth-of-type(3){
+    order: 3;
+}
+.pricing-table .plans .plan-name{
+    margin: 10px 0;
+}
+.pricing-table .plan-details .price{
+    color: #999;
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.pricing-table .plan-details .classic-list li{
+    margin-bottom: 10px;
+}
+
+/* ------ End Our Pricing Plan -------- */
+
+/* --- Start What They Say About Us --- */
+
+.testimonials .user{
+    background-color: #dcdcdc;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.image-user{
+    width: 100px;
+}
+
+.what-they-say {
+    margin-left: 20px;
+    width: calc(100% - 120px);
+}
+
+.what-they-say .username{
+    margin: 10px 0 0 0;
+}
+
+.what-they-say p{
+    margin: 5px 0 0 0;
+}
+
+
+/* --- End What They Say About Us --- */
 
 
 /* -------------- Media Query -------------- */
@@ -139,6 +216,38 @@ Small devices (landscape phones, 576px and up)*/
         flex-basis: 100% !important;
         
     }
+    .pricing-table .plan-details{
+        border: 2px solid #fff;
+        padding: 20px;
+        margin: 20px 0;
+        flex-basis: 100%;
+    }
+    .pricing-table .plan-details:nth-of-type(1){
+        order: 1;
+    }
+    .pricing-table .plan-details:nth-of-type(2){
+        order: 2;
+    }
+    .pricing-table .plan-details:nth-of-type(3){
+        order: 3;
+    }
+    .image-user{
+        float: none !important;
+        margin: auto;
+        
+    }
+    .what-they-say {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .username{
+        margin: 10px 0 !important;
+    }
+    .testimonials .h1{
+        font-size: 25px;
+        margin: 40px 0 !important;
+    }
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -164,6 +273,35 @@ Small devices (landscape phones, 576px and up)*/
     .works .image{
         flex-basis: 50% !important;
     }
+    .pricing-table .plan-details:nth-of-type(1){
+        order: 1;
+    }
+    .pricing-table .plan-details:nth-of-type(2){
+        order: 2;
+    }
+    .pricing-table .plan-details:nth-of-type(3){
+        order: 3;
+    }
+    .pricing-table .plan-details:first-of-type{
+        border: 2px solid #fff;
+        padding: 20px;
+        margin: 20px 0;
+        flex-basis: 100%;
+    }
+    .pricing-table .plan-details:nth-of-type(2){
+        border: 2px solid #fff;
+        padding: 20px;
+        margin-right: 2%;
+        margin-left: 0;
+        flex-basis: 48%;
+    }
+    .pricing-table .plan-details:nth-of-type(3){
+        border: 2px solid #fff;
+        padding: 20px;
+        margin-left: 2%;
+        margin-right: 0 ;
+        flex-basis: 48%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -180,6 +318,13 @@ Small devices (landscape phones, 576px and up)*/
     .works .image{
         flex-basis: 33.33333% !important;
     }
+    .testimonials .user:first-of-type{
+        background-color: #dcdcdc;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -192,6 +337,30 @@ Small devices (landscape phones, 576px and up)*/
     }
     .hidden-lg{
         display: none;
+    }
+    .testimonials .user:first-of-type{
+        background-color: #dcdcdc;
+        width: 80%;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-left: 10%;
+        border-radius: 10px;
+    }
+    .testimonials .user:nth-of-type(2){
+        background-color: #dcdcdc;
+        width: 48%;
+        padding: 20px;
+        margin-bottom: 0px;
+        margin-right: 2%;
+        border-radius: 10px;
+    }
+    .testimonials .user:nth-of-type(3){
+        background-color: #dcdcdc;
+        width: 48%;
+        padding: 20px;
+        margin-bottom: 0px;
+        margin-left: 2%;
+        border-radius: 10px;
     }
 }
 
@@ -239,5 +408,11 @@ Small devices (landscape phones, 576px and up)*/
 .responsive-image{
     width: 100%;
     height: 100%;
+}
+
+.classic-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 /* ------------------ End My framwork ---------------- */
