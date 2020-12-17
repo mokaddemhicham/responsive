@@ -4,7 +4,9 @@
     list-style-type: none;
     text-decoration: none;
 }
-
+body{
+    height: 3000px;
+}
 .header{
     background: url(../img/bg.jpg) no-repeat center center;
     background-size: cover;
