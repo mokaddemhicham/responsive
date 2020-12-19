@@ -356,7 +356,6 @@ Small devices (landscape phones, 576px and up)*/
         float: none;
     }
     nav{
-        /* border-bottom: 1px solid #fff; */
         display: block;
         width: 100%;
         margin: 0 auto;
@@ -369,10 +368,11 @@ Small devices (landscape phones, 576px and up)*/
         width: 100%;
         padding: 20px 0;
         height: 260px;
+        transform: translateY(-100%);
         transition: all .3s ease;
     }
-    .visible{
-        transform: translateY(-100%);
+    .visible-menu{
+        transform: translateY(25%);
     }
     nav .logo{
         padding-left: 15px;
@@ -383,19 +383,54 @@ Small devices (landscape phones, 576px and up)*/
         margin-bottom: 20px;
     }
     .menu-toggle{
-        display: block !important;
+        display: block;
+        cursor: pointer;
         margin-right: 20px;
     }
+    .menu-toggle span{
+        width: 40px;
+        height: 4px;
+        background-color: #fff;
+        display: block;
+        margin-bottom: 7px;
+        position: relative;
+        transition: all .3s ease;
+    }
+    .span1{
+        transform: rotate(45deg);
+        top: 10px !important;
+    }
+    .span2{
+        display: none !important;
+        background-color: red !important;
+    }
+    .span3{
+        bottom: 0 !important;
+        transform: rotate(-45deg);
+        
+    }
+    .menu-toggle span:first-of-type{
+        top: 0;
+    }
+    .menu-toggle span:nth-of-type(2){
+        top: 0;
+    }
+    .menu-toggle span:last-of-type{
+        bottom: 0;
+        margin-bottom: 0;
+    }
+  
     .left-side{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         height: 70px;
+        width: 100%;
         border-bottom: 1px solid #fff;
         background-color: #001c46;
         z-index: 2;
-        position: relative;
+        position: fixed;
     }
  }
 
@@ -585,18 +620,7 @@ Small devices (landscape phones, 576px and up)*/
     padding: 0;
     margin: 0;
 }
-.menu-toggle{
-    display: none;
-    cursor: pointer;
-}
-.menu-toggle span{
-    width: 40px;
-    height: 4px;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 7px;
-}
-.menu-toggle span:last-of-type{
-    margin-bottom: 0;
-}
+
+
+
 /* ------------------ End My framwork ---------------- */
