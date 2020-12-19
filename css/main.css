@@ -384,7 +384,7 @@ Small devices (landscape phones, 576px and up)*/
     }
     .menu-toggle{
         display: block !important;
-        padding-right: 15px;
+        margin-right: 20px;
     }
     .left-side{
         display: flex;
