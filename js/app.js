@@ -5,4 +5,7 @@ $(function(){
         $('.info div').hide();
         $('.' + $(this).data('class')).fadeIn();
     });
+    $('.menu-toggle').click(function(){
+        $('nav ul').toggleClass('visible');
+    });
 });
