@@ -8,7 +8,7 @@
 .header{
     background: url(../img/bg.jpg) no-repeat center center;
     background-size: cover;
-    min-height: 400px;
+    min-height: 600px;
     position: relative;
 }
 .overlay{
@@ -19,6 +19,47 @@
     top: 0;
     left: 0;
     color: #fff;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav .logo {
+    width: 40px;
+}
+nav ul {
+    margin: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li:last-of-type{
+    margin-right: 0;
+}
+
+nav ul li:first-of-type{
+    margin-left: 0;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 17px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all .5s ease;
+}
+
+nav ul li a:hover{
+    border-bottom-color: #fff;
+}
+.content-header{
+    margin-top: 150px;
 }
 .overlay h1{
     font-size: 30px;
@@ -314,11 +355,58 @@ Small devices (landscape phones, 576px and up)*/
         margin-right: 0;
         float: none;
     }
+    nav{
+        /* border-bottom: 1px solid #fff; */
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    nav ul{
+        display: block;
+        background-color: #001c46f3;
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        padding: 20px 0;
+        height: 260px;
+        transition: all .3s ease;
+    }
+    .visible{
+        transform: translateY(-100%);
+    }
+    nav .logo{
+        padding-left: 15px;
+        width: 55px;
+    }
+    nav ul li{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .menu-toggle{
+        display: block !important;
+        padding-right: 15px;
+    }
+    .left-side{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        border-bottom: 1px solid #fff;
+        background-color: #001c46;
+        z-index: 2;
+        position: relative;
+    }
  }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px){ 
     .container{
+        width: 738px;
+    }
+    nav{
+        padding: 0 15px;
+        margin: 0 auto;
         width: 738px;
     }
     .visible-sm{
@@ -368,11 +456,17 @@ Small devices (landscape phones, 576px and up)*/
         margin-right: 0 ;
         flex-basis: 48%;
     }
+    
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px){ 
     .container{
+        width: 962px;
+    }
+    nav{
+        padding: 0 15px;
+        margin: 0 auto;
         width: 962px;
     }
     .visible-md{
@@ -428,6 +522,12 @@ Small devices (landscape phones, 576px and up)*/
         margin-left: 2%;
         border-radius: 10px;
     }
+    nav{
+        padding: 0 15px;
+        margin: 0 auto;
+        width: 1170px;
+    }
+    
 }
 
 
@@ -484,5 +584,19 @@ Small devices (landscape phones, 576px and up)*/
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+.menu-toggle span{
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 7px;
+}
+.menu-toggle span:last-of-type{
+    margin-bottom: 0;
 }
 /* ------------------ End My framwork ---------------- */
