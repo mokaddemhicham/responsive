@@ -364,7 +364,7 @@ Small devices (landscape phones, 576px and up)*/
         display: block;
         background-color: #001c46f3;
         z-index: 1;
-        position: relative;
+        position: fixed;
         width: 100%;
         padding: 20px 0;
         height: 260px;
